@@ -10,9 +10,9 @@ app.get('/*', function(req,res) {
   res.sendFile(path.join(__dirname+'/dist/v-chat-angular/index.html'));
 });
 
-const server = app.listen(port, 'localhost', () => {
+const server = app.listen(port, () => {
   const host = server.address().address;
   const port = server.address().port;
 
-  console.log('Example app listening at http://%s:%s', host, port)
+  console.log('App listening at http://%s:%s', host, port)
 })
