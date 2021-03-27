@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout__navigation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 200px;
+}
+
+.layout__view {
+  display: flex;
+  flex: 1;
+}
