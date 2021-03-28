@@ -6,6 +6,9 @@
     "v-chat-angular": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -28,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/styles.scss",
+              "src/styles/variables.scss",
+              "src/styles/headers.scss"
             ],
             "scripts": []
           },
@@ -91,7 +96,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/styles.scss",
+              "src/styles/variables.scss",
+              "src/styles/headers.scss"
             ],
             "scripts": []
           }

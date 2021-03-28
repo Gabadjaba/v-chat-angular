@@ -1,1 +1,10 @@
-<p>login works!</p>
+<div class="login-page">
+  <div class="login-page__wrapper">
+    <div class="login-page__info"></div>
+    <app-login-form
+      class="login-page__form"
+      (registerAction)="register($event)"
+      (loginAction)="login($event)">
+    </app-login-form>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+@keyframes pup-up {
+  0% {
+    transform: translate(0, 150%);
+  }
+  60% {
+    transform: translate(0, -15%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

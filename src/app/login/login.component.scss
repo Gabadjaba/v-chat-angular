@@ -1,0 +1,61 @@
+@import '~src/styles/variables';
+@import '~src/styles/animations';
+
+.login-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(149deg, $secondary-color 0%, $main-color 58%);
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 70%;
+    min-height: 400px;
+    min-width: 550px;
+    background-color: $neutral-color;
+    border-radius: $border-radius-default;
+    box-shadow: $shadow-large;
+
+    transition-timing-function: ease-in-out;
+    animation: release-login-form .7s;
+  }
+
+  &__info {
+    flex: 1;
+    position: relative;
+    left: -2px;
+    border-radius: $border-radius-default;
+    background-image: url("~src/assets/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__form {
+    display: flex;
+    flex: 1;
+  }
+}
+
+@keyframes release-login-form {
+  0% {
+    transform: translate(0, 100%);
+    box-shadow: none;
+  }
+  40% {
+    transform: translate(0, -15%);
+    box-shadow: none;
+  }
+  60% {
+    transform: translate(0, 0);
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: $shadow-large;
+  }
+}
