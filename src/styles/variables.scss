@@ -1,12 +1,22 @@
+// colors
+$white: #ffffff;
+$light-purple: #636378;
+$dark-purple: #414155;
+
+// theme colors
+$main-color: $dark-purple;
+$secondary-color: $light-purple;
+$neutral-color: $white;
+
+// borders
 $border-radius-default: 16px;
 
+// padding/margin
+$margin-default: 16px;
+$margin-x2: $margin-default * 2;
+
+$padding-default: 16px;
+$padding-x2: $padding-default * 2;
+
+// shadows
 $shadow-large: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-
-// main colors
-$main-color: #414155;
-$secondary-color: #636378;
-$secondary-color: #636378;
-$neutral-color: #ffffff;
-
-// colors
-$light-grey: #CBCCCE;

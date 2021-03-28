@@ -1,14 +1,18 @@
 @import '~src/styles/variables';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-body, html {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+body, html {
+  display: flex;
   height: 100vh;
   width: 100vw;
   background: $neutral-color;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-
-  //min-width: 1600px;
 }
