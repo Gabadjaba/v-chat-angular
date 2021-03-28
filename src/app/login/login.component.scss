@@ -13,8 +13,8 @@
   &__wrapper {
     display: flex;
     flex-direction: row;
-    width: 70%;
-    height: 70%;
+    //width: 70%;
+    //height: 70%;
     min-height: 400px;
     min-width: 550px;
     background-color: $neutral-color;
@@ -22,7 +22,7 @@
     box-shadow: $shadow-large;
 
     transition-timing-function: ease-in-out;
-    animation: release-login-form .7s;
+    animation: release-login-form .6s;
   }
 
   &__info {
@@ -30,6 +30,7 @@
     position: relative;
     left: -2px;
     border-radius: $border-radius-default;
+    background-color: $neutral-color;
     background-image: url("~src/assets/login-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,10 +48,10 @@
     transform: translate(0, 100%);
     box-shadow: none;
   }
-  40% {
-    transform: translate(0, -15%);
-    box-shadow: none;
-  }
+  //40% {
+  //  transform: translate(0, -15%);
+  //  box-shadow: none;
+  //}
   60% {
     transform: translate(0, 0);
     box-shadow: none;
