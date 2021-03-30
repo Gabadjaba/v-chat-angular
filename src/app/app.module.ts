@@ -6,8 +6,9 @@ import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginFormComponent } from './login/login-form/login-form.component';
 import { SharedModule } from './shared/shared.module';
+import { VChatInputComponent } from './shared/v-chat-input/v-chat-input.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SharedModule } from './shared/shared.module';
     AppLayoutComponent,
     LoginComponent,
     DashboardComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    VChatInputComponent
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SharedRoutingModule } from './shared-routing.module';
 import { VChatInputComponent } from './v-chat-input/v-chat-input.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [
-    VChatInputComponent
-  ],
-  exports: [
-    VChatInputComponent
-  ],
+  declarations: [],
+  exports: [],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    FormsModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {}
