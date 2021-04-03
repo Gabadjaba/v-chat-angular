@@ -1,15 +1,27 @@
 // colors
 $white: #ffffff;
+$black: #1C1920;
+$red: #FF0017;
+$dark-red: #EC3A4A;
+$light-grey: #E6E6F4;
+$grey: #B4AAC1;
+
+$dark-blue-1: #1F1E2D;
+$dark-blue-2: #12121D;
+
+
 $light-purple: #636378;
 $dark-purple: #414155;
 
 // theme colors
-$main-color: $dark-purple;
-$secondary-color: $light-purple;
-$neutral-color: $white;
+$main-color: $white;
+$secondary-color: $dark-red;
+$background-gradient-color: linear-gradient(180deg, $dark-blue-1 0%, $dark-blue-2 100%);
 
 // borders
+$border-radius-small: 8px;
 $border-radius-default: 16px;
+$border-radius-large: 24px;
 
 // padding/margin
 $margin-default: 16px;
@@ -19,4 +31,4 @@ $padding-default: 16px;
 $padding-x2: $padding-default * 2;
 
 // shadows
-$shadow-large: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+$shadow-default: 0px 16px 40px rgba(0, 0, 0, 0.24);

@@ -1,10 +1,13 @@
 <div class="login-page">
   <div class="login-page__wrapper">
-    <div class="login-page__info"></div>
-    <app-login-form
-      class="login-page__form"
-      (registerAction)="register($event)"
-      (loginAction)="login($event)">
-    </app-login-form>
+    <div class="login-page__left"></div>
+    <div class="login-page__right">
+      <img class="login-page__logo" src="assets/icons/logo.svg" alt="UpChat">
+      <app-login-form
+        class="login-page__form"
+        (registerAction)="register($event)"
+        (loginAction)="login($event)">
+      </app-login-form>
+    </div>
   </div>
 </div>

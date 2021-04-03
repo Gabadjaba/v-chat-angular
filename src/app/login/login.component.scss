@@ -1,7 +1,4 @@
 @import '~src/styles/variables';
-@import '~src/styles/animations';
-
-$login-page-bg: linear-gradient(149deg, $secondary-color 0%, $main-color 58%);
 
 .login-page {
   height: 100%;
@@ -9,32 +6,39 @@ $login-page-bg: linear-gradient(149deg, $secondary-color 0%, $main-color 58%);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: $login-page-bg;
-  overflow: hidden;
-  animation: background-reveal 3.3s;
 
   &__wrapper {
+    padding: $padding-default;
     display: flex;
     flex-direction: row;
     min-height: 400px;
     min-width: 550px;
-    background-color: $neutral-color;
-    border-radius: $border-radius-default;
-    box-shadow: $shadow-large;
-
-    transition-timing-function: ease-in-out;
-    animation: release-login-form .6s;
+    border-radius: $border-radius-large;
+    background-color: $main-color;
+    box-shadow: $shadow-default;
   }
 
-  &__info {
+  &__left {
     display: flex;
     width: 100%;
-    border-radius: $border-radius-default - 2px; // weird fix for border corners
-    background-color: $main-color;
-    background-image: url("~src/assets/login-bg.jpg"), linear-gradient(153deg, rgba(2,180,237,1) 0%, rgba(252,0,0,1) 88%);
+    background-image: url("~src/assets/login-bg.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+  }
+
+  &__right {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-top: 34px;
+    height: 60px;
+    width: 125px;
   }
 
   &__form {
@@ -44,25 +48,4 @@ $login-page-bg: linear-gradient(149deg, $secondary-color 0%, $main-color 58%);
   }
 }
 
-@keyframes background-reveal {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
 
-@keyframes release-login-form {
-  0% {
-    transform: translate(0, 100%);
-    box-shadow: none;
-  }
-  60% {
-    transform: translate(0, 0);
-    box-shadow: none;
-  }
-  100% {
-    box-shadow: $shadow-large;
-  }
-}
