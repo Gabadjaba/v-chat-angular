@@ -1,11 +1,59 @@
 @import '../../../styles/variables';
 
-.v-chat-input-wrapper {
+$input-font-size: 1.143em;
+
+:host {
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .label-active {
+    font-size: 0.857em;
+    top: -2px;
+  }
+
+  .error-container {
+    color: $error;
+    padding-top: $padding-default;
+  }
+
   input {
-    background: transparent;
-    border: none;
+    padding: 26px 10px 10px 10px;
+    height: 56px;
+    border: 1px solid $secondary-color;
+    border-radius: $border-radius-small;
     box-shadow: none;
     width: 100%;
-    color: $main-color;
+    color: $text-color;
+    font-size: $input-font-size;
+
+    &:focus {
+      + label {
+        font-size: 0.857em;
+        top: -2px;
+      }
+    }
+  }
+
+  label {
+    align-items: center;
+    position: absolute;
+    pointer-events: none;
+    top: 8px;
+    left: 0;
+    padding: 10px;
+    color: $label-color;
+    font-size: $input-font-size;
+    transition: .3s;
+  }
+}
+
+.input-error {
+  input {
+    border: 1px solid $error;
   }
 }

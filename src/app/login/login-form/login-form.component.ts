@@ -7,7 +7,9 @@ import {Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class LoginFormComponent {
   login: string;
+  loginLabel: string;
   password: string;
+  passwordLabel: string;
   isRegister: boolean;
 
   @Output() registerAction: EventEmitter<any> = new EventEmitter();
@@ -16,6 +18,8 @@ export class LoginFormComponent {
   constructor() {
     this.login = '';
     this.password = '';
+    this.loginLabel = 'Login';
+    this.passwordLabel = 'Password';
     this.isRegister = true;
   }
 

@@ -1,13 +1,13 @@
-<form *ngIf="!isRegister" class="login-form" (ngSubmit)="onLogin()">
-  <app-v-chat-input [value]="login"></app-v-chat-input>
-  <app-v-chat-input [value]="password"></app-v-chat-input>
+<form *ngIf="!isRegister" class="form" (ngSubmit)="onLogin()">
+  <app-v-chat-input [value]="login" [label]="loginLabel" class="form__input"></app-v-chat-input>
+  <app-v-chat-input [value]="password" [label]="passwordLabel" class="form__input"></app-v-chat-input>
   <button type="submit">Login</button>
   <p>Don't have an account? <span class="link" (click)="showRegisterForm(true)">Register</span>!</p>
 </form>
 
-<form *ngIf="isRegister" class="login-form" (ngSubmit)="onRegister()">
-  <app-v-chat-input [value]="login"></app-v-chat-input>
-  <app-v-chat-input [value]="password"></app-v-chat-input>
+<form *ngIf="isRegister" class="form" (ngSubmit)="onRegister()">
+  <app-v-chat-input [value]="login" [label]="loginLabel" class="form__input"></app-v-chat-input>
+  <app-v-chat-input [value]="password" [label]="passwordLabel" class="form__input"></app-v-chat-input>
   <button type="submit">Register</button>
   <p>Already have an account? <span class="link" (click)="showRegisterForm(false)">Login</span>!</p>
 </form>

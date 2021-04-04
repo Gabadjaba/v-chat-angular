@@ -1,6 +1,6 @@
 @import '../../../styles/variables';
 
-.login-form {
+.form {
   height: 100%;
   width: 100%;
   display: flex;
@@ -8,4 +8,8 @@
   align-items: center;
   justify-content: center;
   align-content: center;
+
+  &__input {
+    padding-bottom: $padding-default;
+  }
 }

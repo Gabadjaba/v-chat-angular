@@ -9,13 +9,17 @@ $grey: #B4AAC1;
 $dark-blue-1: #1F1E2D;
 $dark-blue-2: #12121D;
 
-
-$light-purple: #636378;
-$dark-purple: #414155;
-
 // theme colors
 $main-color: $white;
-$secondary-color: $dark-red;
+$secondary-color: $light-grey;
+$accent-color: $dark-red;
+
+
+$text-color: $black;
+$label-color: $grey;
+
+$error: $red;
+
 $background-gradient-color: linear-gradient(180deg, $dark-blue-1 0%, $dark-blue-2 100%);
 
 // borders
@@ -28,6 +32,7 @@ $margin-default: 16px;
 $margin-x2: $margin-default * 2;
 
 $padding-default: 16px;
+$padding-large: 24px;
 $padding-x2: $padding-default * 2;
 
 // shadows
