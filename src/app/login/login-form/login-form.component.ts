@@ -1,4 +1,6 @@
 import {Component, Input, Output, EventEmitter } from '@angular/core';
+import { FormStateEnum } from './enums/form-state.enum';
+import { LoginDataModel } from './models/login-data.model';
 
 @Component({
   selector: 'app-login-form',
@@ -12,6 +14,9 @@ export class LoginFormComponent {
   passwordLabel: string;
   isRegister: boolean;
 
+  stateTypes = FormStateEnum;
+  currentState: FormStateEnum;
+
   @Output() registerAction: EventEmitter<any> = new EventEmitter();
   @Output() loginAction: EventEmitter<any> = new EventEmitter();
 
@@ -21,19 +26,21 @@ export class LoginFormComponent {
     this.loginLabel = 'Login';
     this.passwordLabel = 'Password';
     this.isRegister = true;
+
+    this.currentState = FormStateEnum.LOGIN;
   }
 
   onRegister(): void {
     const { login, password } = this;
-    this.registerAction.emit({ login, password });
+    this.registerAction.emit(new LoginDataModel(login, password));
   }
 
   onLogin(): void {
     const { login, password } = this;
-    this.loginAction.emit({ login, password });
+    this.loginAction.emit(new LoginDataModel(login, password));
   }
 
-  showRegisterForm(value: boolean): void {
-    this.isRegister = value;
+  changeState(state: FormStateEnum): void {
+    this.currentState = state;
   }
 }

@@ -48,7 +48,8 @@ $input-font-size: 1.143em;
     padding: 10px;
     color: $label-color;
     font-size: $input-font-size;
-    transition: .3s;
+    transition: .2s;
+    transition-timing-function: ease;
   }
 }
 

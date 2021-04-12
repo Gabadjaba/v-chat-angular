@@ -1,13 +1,13 @@
-<form *ngIf="!isRegister" class="form" (ngSubmit)="onLogin()">
+<form *ngIf="currentState === stateTypes.LOGIN" class="form" (ngSubmit)="onLogin()">
   <app-v-chat-input [value]="login" [label]="loginLabel" class="form__input"></app-v-chat-input>
   <app-v-chat-input [value]="password" [label]="passwordLabel" class="form__input"></app-v-chat-input>
   <button type="submit">Login</button>
-  <p>Don't have an account? <span class="link" (click)="showRegisterForm(true)">Register</span>!</p>
+  <p>Don't have an account? <span class="link" (click)="changeState(stateTypes.REGISTER)">Register</span>!</p>
 </form>
 
-<form *ngIf="isRegister" class="form" (ngSubmit)="onRegister()">
+<form *ngIf="currentState === stateTypes.REGISTER" class="form" (ngSubmit)="onRegister()">
   <app-v-chat-input [value]="login" [label]="loginLabel" class="form__input"></app-v-chat-input>
   <app-v-chat-input [value]="password" [label]="passwordLabel" class="form__input"></app-v-chat-input>
   <button type="submit">Register</button>
-  <p>Already have an account? <span class="link" (click)="showRegisterForm(false)">Login</span>!</p>
+  <p>Already have an account? <span class="link" (click)="changeState(stateTypes.LOGIN)">Login</span>!</p>
 </form>

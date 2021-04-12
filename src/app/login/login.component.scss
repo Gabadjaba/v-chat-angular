@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: $background-gradient-color;
 
   &__container {
     padding: $padding-default;
